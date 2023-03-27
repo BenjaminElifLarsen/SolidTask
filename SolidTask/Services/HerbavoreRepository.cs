@@ -1,7 +1,7 @@
 ﻿using SolidTask.Models;
 
 namespace SolidTask.Services;
-internal class HerbavoreRepository : IHerbavoreRepository
+public class HerbavoreRepository : IHerbavoreRepository
 {
     private readonly IStore _store;
 

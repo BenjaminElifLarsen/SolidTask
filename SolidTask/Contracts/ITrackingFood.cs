@@ -1,5 +1,5 @@
 ﻿namespace SolidTask.Contracts;
-internal interface ITrackingFood
+public interface ITrackingFood
 {
     public void Track();
 }

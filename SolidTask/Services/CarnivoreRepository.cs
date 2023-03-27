@@ -1,7 +1,7 @@
 ﻿using SolidTask.Models;
 
 namespace SolidTask.Services;
-internal class CarnivoreRepository : ICarnivoreRepository
+public class CarnivoreRepository : ICarnivoreRepository
 {
     private readonly IStore _store;
 

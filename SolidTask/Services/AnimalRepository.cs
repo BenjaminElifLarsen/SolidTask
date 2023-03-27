@@ -1,7 +1,7 @@
 ﻿using SolidTask.Models;
 
 namespace SolidTask.Services;
-internal class AnimalRepository : IAnimalRepository
+public class AnimalRepository : IAnimalRepository
 {
     private IStore _store;
 

@@ -1,5 +1,5 @@
 ﻿namespace SolidTask.Contracts;
-internal interface IHuntingFood
+public interface IHuntingFood
 {
     public void Hunt();
 }

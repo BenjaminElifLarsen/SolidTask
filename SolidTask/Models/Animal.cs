@@ -1,5 +1,5 @@
 ﻿namespace SolidTask.Models;
-internal class Animal
+public class Animal
 {
     protected string _name;
     protected bool _isBird;

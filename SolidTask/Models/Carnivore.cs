@@ -1,7 +1,7 @@
 ﻿using SolidTask.Contracts;
 
 namespace SolidTask.Models;
-internal class Carnivore : Animal, IEatingFood, IHuntingFood, ITrackingFood
+public class Carnivore : Animal, IEatingFood, IHuntingFood, ITrackingFood
 {
     public Carnivore(string name, bool isbird) : base(name, isbird)
     {

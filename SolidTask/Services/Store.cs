@@ -1,7 +1,7 @@
 ﻿using SolidTask.Models;
 
 namespace SolidTask.Services;
-internal class Store : IStore
+public class Store : IStore
 {
     private List<Animal> _entities;
     public IEnumerable<Animal> All => _entities;

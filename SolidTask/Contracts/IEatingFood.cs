@@ -1,5 +1,5 @@
 ﻿namespace SolidTask.Contracts;
-internal interface IEatingFood
+public interface IEatingFood
 {
     public void Eat();
 }

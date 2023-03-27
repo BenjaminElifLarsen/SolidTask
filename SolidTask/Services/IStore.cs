@@ -1,7 +1,7 @@
 ﻿using SolidTask.Models;
 
 namespace SolidTask.Services;
-internal interface IStore
+public interface IStore
 {
     public void Add(Animal entity);
 
