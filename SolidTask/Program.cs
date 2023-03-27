@@ -10,7 +10,6 @@ IEnumerable<Animal> animals = new List<Animal>()
     new Herbavore("Worm",true),
     new Carnivore("Fox",false),
     new Herbavore("Bunny",false),
-
 };
 
 foreach (var animal in animals)

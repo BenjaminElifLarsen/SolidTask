@@ -17,7 +17,7 @@ public class CarnivoreController : ControllerBase
 
     [HttpGet]
     public IActionResult All()
-    { //non-lean endpoints
+    {
         var result = _carnivoreService.All();
         return Ok(result);
     }

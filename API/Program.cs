@@ -17,6 +17,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//these would normally be placed in another file 
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("database")));
 builder.Services.AddScoped<IBaseRepository<Animal>, EntityFrameworkRepository<Animal, DataContext>>();
 builder.Services.AddScoped<IBaseRepository<Herbavore>, EntityFrameworkRepository<Herbavore, DataContext>>();
@@ -35,7 +36,7 @@ builder.Services.AddScoped<IHerbavoreService, HerbavoreService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment()) //have a database 
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
