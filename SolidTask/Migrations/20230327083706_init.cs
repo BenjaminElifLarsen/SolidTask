@@ -14,19 +14,6 @@ namespace SolidTask.Migrations
                 name: "AnimalSequence");
 
             migrationBuilder.CreateTable(
-                name: "Animals",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false, defaultValueSql: "NEXT VALUE FOR [AnimalSequence]"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsBird = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Animals", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Carnivores",
                 columns: table => new
                 {
@@ -58,9 +45,6 @@ namespace SolidTask.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Animals");
-
             migrationBuilder.DropTable(
                 name: "Carnivores");
 

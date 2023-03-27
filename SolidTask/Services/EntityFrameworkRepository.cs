@@ -18,5 +18,6 @@ public class EntityFrameworkRepository<TEntity, TContext> : IBaseRepository<TEnt
     public void Add(TEntity entity)
     {
         _context.Add(entity);
+        _context.SaveChanges(); //would normally have an unit of work for this
     }
 }

@@ -41,7 +41,7 @@ namespace SolidTask.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Animals");
+                    b.ToTable((string)null);
 
                     b.UseTpcMappingStrategy();
                 });

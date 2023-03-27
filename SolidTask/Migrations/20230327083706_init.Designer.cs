@@ -11,7 +11,7 @@ using SolidTask.Services;
 namespace SolidTask.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230327081526_init")]
+    [Migration("20230327083706_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -44,7 +44,7 @@ namespace SolidTask.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Animals");
+                    b.ToTable((string)null);
 
                     b.UseTpcMappingStrategy();
                 });

@@ -1,5 +1,5 @@
 ﻿namespace SolidTask.Models;
-public class Animal
+public abstract class Animal
 {
     protected int _id;
     protected string _name;

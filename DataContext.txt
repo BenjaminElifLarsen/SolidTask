@@ -1,3 +1,7 @@
 cd .\SolidTask\;
 	dotnet ef --startup-project ..\API\ migrations add "init";
 	cd ..;
+
+cd .\SolidTask\;
+	dotnet ef --startup-project ..\API\ database update;
+	cd..;

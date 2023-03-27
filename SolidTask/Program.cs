@@ -4,7 +4,7 @@ using SolidTask.Services;
 
 IEnumerable<Animal> animals = new List<Animal>()
 {
-    new Animal("Worm",true),
+    new Herbavore("Worm",true),
     new Carnivore("Fox",false),
     new Herbavore("Bunny",false),
 
