@@ -1,6 +1,9 @@
 ﻿using SolidTask.Contracts;
 using SolidTask.Models;
-using SolidTask.Services;
+using SolidTask.Repositories;
+using SolidTask.Repositories.Abstracts;
+using SolidTask.Repositories.Context;
+using SolidTask.Repositories.Implementations;
 
 IEnumerable<Animal> animals = new List<Animal>()
 {
@@ -17,9 +20,9 @@ foreach (var animal in animals.Where(x => x is IEatingFood).Select(x => (IEating
     animal.Eat();
 
 IStore _store = new Store();
-IBaseRepository<Animal> _animalRepo = new InlineMemoryRepository<Animal, IStore>(_store);
-IBaseRepository<Herbavore> _herbaRepo = new InlineMemoryRepository<Herbavore, IStore>(_store);
-IBaseRepository<Carnivore> _carniRepo = new InlineMemoryRepository<Carnivore, IStore>(_store);
+IBaseRepository<Animal> _animalRepo = new InMemoryRepository<Animal, IStore>(_store);
+IBaseRepository<Herbavore> _herbaRepo = new InMemoryRepository<Herbavore, IStore>(_store);
+IBaseRepository<Carnivore> _carniRepo = new InMemoryRepository<Carnivore, IStore>(_store);
 IAnimalRepository _animalRepository = new AnimalRepository(_animalRepo);
 IHerbavoreRepository _herbavoreRepository = new HerbavoreRepository(_herbaRepo);
 ICarnivoreRepository _carnivoreRepository = new CarnivoreRepository(_carniRepo);

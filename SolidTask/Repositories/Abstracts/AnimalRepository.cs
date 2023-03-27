@@ -1,6 +1,6 @@
 ﻿using SolidTask.Models;
 
-namespace SolidTask.Services;
+namespace SolidTask.Repositories.Abstracts;
 public class AnimalRepository : IAnimalRepository
 {
     private IBaseRepository<Animal> _store;

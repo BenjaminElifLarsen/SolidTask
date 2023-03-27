@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SolidTask.Models;
-using SolidTask.Services;
+using SolidTask.Services.Carnivore;
+using SolidTask.Services.Carnivore.Add;
 
 namespace API.Controllers;
 
@@ -8,32 +8,24 @@ namespace API.Controllers;
 [ApiController]
 public class CarnivoreController : ControllerBase
 {
-    private readonly ICarnivoreRepository _repository;
-    private readonly IAnimalRepository _animalRepository;
+    private readonly ICarnivoreService _carnivoreService;
 
-    public CarnivoreController(ICarnivoreRepository carnivoreRepository, IAnimalRepository animalRepository)
+    public CarnivoreController(ICarnivoreService carnivoreService)
     {
-        _repository = carnivoreRepository;
-        _animalRepository = animalRepository;
+        _carnivoreService = carnivoreService;
     }
 
     [HttpGet]
     public IActionResult All()
     { //non-lean endpoints
-        var result = _repository.All;
+        var result = _carnivoreService.All();
         return Ok(result);
     }
 
     [HttpPost]
     public IActionResult Add([FromBody] CarnivoreRequest request)
     {
-        _animalRepository.AddAnimal(new Carnivore(request.Name, request.IsBird));
+        _carnivoreService.Add(request);
         return Ok();
-    }
-
-    public class CarnivoreRequest
-    {
-        public string Name { get; set; }
-        public bool IsBird { get; set; }
     }
 }

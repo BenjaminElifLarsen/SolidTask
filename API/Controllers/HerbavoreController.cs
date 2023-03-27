@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SolidTask.Models;
-using SolidTask.Services;
+using SolidTask.Services.Herbavore;
+using SolidTask.Services.Herbavore.Add;
 
 namespace API.Controllers;
 
@@ -8,32 +8,26 @@ namespace API.Controllers;
 [ApiController]
 public class HerbavoreController : ControllerBase
 {
-    private readonly IHerbavoreRepository _repository;
-    private readonly IAnimalRepository _animalRepository;
+    private readonly IHerbavoreService _herbavoreService;
 
-    public HerbavoreController(IHerbavoreRepository repository, IAnimalRepository animalRepository)
+    public HerbavoreController(IHerbavoreService herbavoreService)
     {
-        _repository = repository;
-        _animalRepository = animalRepository;
+        _herbavoreService = herbavoreService;
     }
 
     [HttpGet]
     public IActionResult All()
     {
-        var result = _repository.All;
+        var result = _herbavoreService.All();
         return Ok(result);
     }
 
     [HttpPost]
     public IActionResult Add([FromBody] HerbavoreRequest request)
     {
-        _animalRepository.AddAnimal(new Herbavore(request.Name, request.IsBird));
+        _herbavoreService.Add(request);
         return Ok();
     }
 
-    public class HerbavoreRequest
-    {
-        public string Name { get; set; }
-        public bool IsBird { get; set; }
-    }
 }
+

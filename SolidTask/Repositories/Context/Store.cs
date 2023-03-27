@@ -1,6 +1,6 @@
 ﻿using SolidTask.Models;
 
-namespace SolidTask.Services;
+namespace SolidTask.Repositories.Context;
 public class Store : IStore
 {
     private List<object> _entities;

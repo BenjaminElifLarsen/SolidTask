@@ -1,6 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using SolidTask.Models;
-using SolidTask.Services;
+using SolidTask.Repositories;
+using SolidTask.Repositories.Abstracts;
+using SolidTask.Repositories.Context;
+using SolidTask.Repositories.Implementations;
+using SolidTask.Repositories.UnitOfWorks;
+using SolidTask.Services.Carnivore;
+using SolidTask.Services.Herbavore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +25,11 @@ builder.Services.AddScoped<IBaseRepository<Carnivore>, EntityFrameworkRepository
 builder.Services.AddScoped<IAnimalRepository, AnimalRepository>();
 builder.Services.AddScoped<IHerbavoreRepository, HerbavoreRepository>();
 builder.Services.AddScoped<ICarnivoreRepository, CarnivoreRepository>();
+
+builder.Services.AddScoped<IUnitOfWork, EntityFrameworkUnitOfWork>();
+
+builder.Services.AddScoped<ICarnivoreService, CarnivoreService>();
+builder.Services.AddScoped<IHerbavoreService, HerbavoreService>();
 
 
 var app = builder.Build();

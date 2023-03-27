@@ -1,6 +1,6 @@
 ﻿using SolidTask.Models;
 
-namespace SolidTask.Services;
+namespace SolidTask.Repositories.Context;
 public interface IStore
 {
     public void Add(object entity);

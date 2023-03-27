@@ -1,6 +1,6 @@
 ﻿using SolidTask.Models;
 
-namespace SolidTask.Services;
+namespace SolidTask.Repositories.Abstracts;
 public interface IAnimalRepository
 {
     public void AddAnimal(Animal entity);

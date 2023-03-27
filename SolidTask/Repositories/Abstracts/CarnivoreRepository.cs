@@ -1,6 +1,6 @@
 ﻿using SolidTask.Models;
 
-namespace SolidTask.Services;
+namespace SolidTask.Repositories.Abstracts;
 public class CarnivoreRepository : ICarnivoreRepository
 {
     private readonly IBaseRepository<Carnivore> _store;
@@ -10,5 +10,5 @@ public class CarnivoreRepository : ICarnivoreRepository
         _store = store;
     }
 
-    public IEnumerable<Carnivore> All => _store.All.Where(x => x is Carnivore).Select(x => (Carnivore)x);
+    public IEnumerable<Carnivore> All => _store.All.Where(x => x is Carnivore).Select(x => x);
 }

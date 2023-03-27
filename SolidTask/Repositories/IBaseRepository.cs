@@ -1,4 +1,4 @@
-﻿namespace SolidTask.Services;
+﻿namespace SolidTask.Repositories;
 
 public interface IBaseRepository<TEntity> where TEntity : class
 {

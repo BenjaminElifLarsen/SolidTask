@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace SolidTask.Services;
+namespace SolidTask.Repositories.Implementations;
 
 public class EntityFrameworkRepository<TEntity, TContext> : IBaseRepository<TEntity> where TEntity : class where TContext : DbContext
 {
