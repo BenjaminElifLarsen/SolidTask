@@ -11,8 +11,9 @@ public class DataContext : DbContext
 
 	}
 
-	internal DbSet<Herbavore> Herbavore { get;set; }
-	internal DbSet<Carnivore> Carnivore { get;set; }
+	internal DbSet<Animal> Animals { get; set; }
+	internal DbSet<Herbavore> Herbavores { get;set; }
+	internal DbSet<Carnivore> Carnivores { get;set; }
 
 	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{

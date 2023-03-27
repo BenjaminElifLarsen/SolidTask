@@ -1,0 +1,3 @@
+cd .\SolidTask\;
+	dotnet ef --startup-project ..\API\ migrations add "init";
+	cd ..;

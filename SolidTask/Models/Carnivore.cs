@@ -3,6 +3,15 @@
 namespace SolidTask.Models;
 public class Carnivore : Animal, IEatingFood, IHuntingFood, ITrackingFood
 {
+    private bool _eatenFoodToday;
+
+    public bool EatenFoodToday { get => _eatenFoodToday; private set => _eatenFoodToday = value; }
+
+    protected Carnivore()
+    {
+
+    }
+
     public Carnivore(string name, bool isbird) : base(name, isbird)
     {
     }
