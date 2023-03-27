@@ -3,9 +3,9 @@
 namespace SolidTask.Services;
 public class CarnivoreRepository : ICarnivoreRepository
 {
-    private readonly IStore _store;
+    private readonly IBaseRepository<Carnivore> _store;
 
-    public CarnivoreRepository(IStore store)
+    public CarnivoreRepository(IBaseRepository<Carnivore> store)
     {
         _store = store;
     }

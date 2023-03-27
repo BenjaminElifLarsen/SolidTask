@@ -3,9 +3,9 @@
 namespace SolidTask.Services;
 public class HerbavoreRepository : IHerbavoreRepository
 {
-    private readonly IStore _store;
+    private readonly IBaseRepository<Herbavore> _store;
 
-    public HerbavoreRepository(IStore store)
+    public HerbavoreRepository(IBaseRepository<Herbavore> store)
     {
         _store = store;
     }

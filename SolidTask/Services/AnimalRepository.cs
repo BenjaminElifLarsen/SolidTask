@@ -3,9 +3,9 @@
 namespace SolidTask.Services;
 public class AnimalRepository : IAnimalRepository
 {
-    private IStore _store;
+    private IBaseRepository<Animal> _store;
 
-    public AnimalRepository(IStore store)
+    public AnimalRepository(IBaseRepository<Animal> store)
     {
         _store = store;
     }

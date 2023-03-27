@@ -1,10 +1,17 @@
 ﻿namespace SolidTask.Models;
 public class Animal
 {
+    protected int _id;
     protected string _name;
     protected bool _isBird;
 
-    public string Name => _name;
+    public int Id { get => _id; set => _id = value; }
+    public string Name { get => _name; protected set => _name = value; }
+    public bool IsBird {get => _isBird; protected set => _isBird = value; }
+    protected Animal()
+    {
+
+    }
 
     public Animal(string name, bool isBird)
     {

@@ -3,15 +3,15 @@
 namespace SolidTask.Services;
 public class Store : IStore
 {
-    private List<Animal> _entities;
-    public IEnumerable<Animal> All => _entities;
+    private List<object> _entities;
+    public IEnumerable<object> All => _entities;
 
     public Store()
     {
-        _entities = new List<Animal>();
+        _entities = new List<object>();
     }
 
-    public void Add(Animal entity)
+    public void Add(object entity)
     {
         _entities.Add(entity);
     }

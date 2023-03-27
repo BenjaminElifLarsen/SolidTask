@@ -17,9 +17,12 @@ foreach (var animal in animals.Where(x => x is IEatingFood).Select(x => (IEating
     animal.Eat();
 
 IStore _store = new Store();
-IAnimalRepository _animalRepository = new AnimalRepository(_store);
-IHerbavoreRepository _herbavoreRepository = new HerbavoreRepository(_store);
-ICarnivoreRepository _carnivoreRepository = new CarnivoreRepository(_store);
+IBaseRepository<Animal> _animalRepo = new InlineMemoryRepository<Animal, IStore>(_store);
+IBaseRepository<Herbavore> _herbaRepo = new InlineMemoryRepository<Herbavore, IStore>(_store);
+IBaseRepository<Carnivore> _carniRepo = new InlineMemoryRepository<Carnivore, IStore>(_store);
+IAnimalRepository _animalRepository = new AnimalRepository(_animalRepo);
+IHerbavoreRepository _herbavoreRepository = new HerbavoreRepository(_herbaRepo);
+ICarnivoreRepository _carnivoreRepository = new CarnivoreRepository(_carniRepo);
 
 foreach (var animal in animals)
     _animalRepository.AddAnimal(animal);

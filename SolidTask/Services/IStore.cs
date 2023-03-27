@@ -3,7 +3,7 @@
 namespace SolidTask.Services;
 public interface IStore
 {
-    public void Add(Animal entity);
+    public void Add(object entity);
 
-    public IEnumerable<Animal> All { get; }
+    public IEnumerable<object> All { get; }
 }
