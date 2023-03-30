@@ -6,11 +6,12 @@ public class AnimalListItem
     public int Id { get; set; }
     public string Name { get; set; }
     public string Sound { get; set; }
-
+    public string Type { get; set; }
     public AnimalListItem(Ani animal)
     {
         Id = animal.Id;
         Name = animal.Name;
         Sound = animal.Sound;
+        Type = animal.GetType().Name;
     }
 }

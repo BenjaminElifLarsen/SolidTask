@@ -8,15 +8,19 @@ using SolidTask.Repositories.Implementations;
 IEnumerable<Animal> animals = new List<Animal>()
 {
     new Herbavore("Worm",true,"Worm sounds"),
-    new Carnivore("Fox",false, "What does the fox say?"),
+    new Carnivore("Fox",false, "SCREAM"),
     new Herbavore("Bunny",false, "Cute bunny sounds"),
 };
 
 foreach (var animal in animals)
     animal.GenerateSound();
 
-foreach (var animal in animals.Where(x => x is IEatingFood).Select(x => (IEatingFood)x))
-    animal.Eat();
+foreach (var eaters in animals.Where(x => x is IEatingFood).Select(x => (IEatingFood)x))
+    eaters.Eat();
+
+
+foreach (var hunters in animals.Where(x => x is IHuntingFood).Select(x => (IHuntingFood)x))
+    hunters.Hunt();
 
 IStore _store = new Store();
 IBaseRepository<Animal> _animalRepo = new InMemoryRepository<Animal, IStore>(_store);
