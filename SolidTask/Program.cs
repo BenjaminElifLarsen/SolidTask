@@ -1,5 +1,5 @@
-﻿using SolidTask.Contracts;
-using SolidTask.Models;
+﻿using SolidTask.Models;
+using SolidTask.Models.Contracts;
 using SolidTask.Repositories;
 using SolidTask.Repositories.Abstracts;
 using SolidTask.Repositories.Context;

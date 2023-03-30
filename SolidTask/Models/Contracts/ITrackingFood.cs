@@ -1,4 +1,4 @@
-﻿namespace SolidTask.Contracts;
+﻿namespace SolidTask.Models.Contracts;
 public interface ITrackingFood
 {
     public void Track();

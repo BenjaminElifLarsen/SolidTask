@@ -1,4 +1,4 @@
-﻿using SolidTask.Contracts;
+﻿using SolidTask.Models.Contracts;
 
 namespace SolidTask.Models;
 public class Herbavore : Animal, IEatingFood
