@@ -11,7 +11,7 @@ using SolidTask.Repositories.Context;
 namespace SolidTask.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230327083706_init")]
+    [Migration("20230330071446_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -39,6 +39,10 @@ namespace SolidTask.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sound")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

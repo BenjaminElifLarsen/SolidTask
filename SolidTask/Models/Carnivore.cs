@@ -12,13 +12,14 @@ public class Carnivore : Animal, IEatingFood, IHuntingFood, ITrackingFood
 
     }
 
-    public Carnivore(string name, bool isbird) : base(name, isbird)
+    public Carnivore(string name, bool isbird, string sound) : base(name, isbird)
     {
+        _sound = sound;
     }
 
     public override void GenerateSound()
     {
-        Console.WriteLine("'Meat-eating sounds'");
+        Console.WriteLine(_sound);
     }
 
     public override bool CanFly()

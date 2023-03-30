@@ -5,6 +5,7 @@ using SolidTask.Repositories.Abstracts;
 using SolidTask.Repositories.Context;
 using SolidTask.Repositories.Implementations;
 using SolidTask.Repositories.UnitOfWorks;
+using SolidTask.Services.Animal;
 using SolidTask.Services.Carnivore;
 using SolidTask.Services.Herbavore;
 
@@ -31,6 +32,7 @@ builder.Services.AddScoped<IUnitOfWork, EntityFrameworkUnitOfWork>();
 
 builder.Services.AddScoped<ICarnivoreService, CarnivoreService>();
 builder.Services.AddScoped<IHerbavoreService, HerbavoreService>();
+builder.Services.AddScoped<IAnimalService, AnimalService>();
 
 
 var app = builder.Build();

@@ -1,5 +1,5 @@
-﻿namespace SolidTask.Services.Carnivore.GetAll;
-using Carni = SolidTask.Models.Carnivore;
+﻿using Carni = SolidTask.Models.Carnivore;
+namespace SolidTask.Services.Carnivore.GetAll;
 public class CarnivoreListItem
 {
     public int Id { get; }

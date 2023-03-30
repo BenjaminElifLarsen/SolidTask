@@ -1,5 +1,5 @@
-﻿namespace SolidTask.Services.Herbavore.GetAll;
-using Herba = SolidTask.Models.Herbavore;
+﻿using Herba = SolidTask.Models.Herbavore;
+namespace SolidTask.Services.Herbavore.GetAll;
 public class HerbavoreListItem
 {
     public int Id { get; }

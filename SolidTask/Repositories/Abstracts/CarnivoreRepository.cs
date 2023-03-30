@@ -10,5 +10,5 @@ public class CarnivoreRepository : ICarnivoreRepository
         _store = store;
     }
 
-    public IEnumerable<Carnivore> All => _store.All.Where(x => x is Carnivore).Select(x => x);
+    public IEnumerable<Carnivore> All => _store.All;
 }

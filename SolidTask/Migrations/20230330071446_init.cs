@@ -20,6 +20,7 @@ namespace SolidTask.Migrations
                     Id = table.Column<int>(type: "int", nullable: false, defaultValueSql: "NEXT VALUE FOR [AnimalSequence]"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsBird = table.Column<bool>(type: "bit", nullable: false),
+                    Sound = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     EatenFoodToday = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -34,6 +35,7 @@ namespace SolidTask.Migrations
                     Id = table.Column<int>(type: "int", nullable: false, defaultValueSql: "NEXT VALUE FOR [AnimalSequence]"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsBird = table.Column<bool>(type: "bit", nullable: false),
+                    Sound = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     GrassedToday = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>

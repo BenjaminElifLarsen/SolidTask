@@ -14,4 +14,6 @@ public class AnimalRepository : IAnimalRepository
     {
         _store.Add(entity);
     }
+
+    public IEnumerable<Animal> All => _store.All;
 }

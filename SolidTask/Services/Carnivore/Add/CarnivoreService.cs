@@ -6,7 +6,7 @@ public partial class CarnivoreService
 {
     public void Add(CarnivoreRequest request)
     {
-        _unitOfWork.AnimalRepository.AddAnimal(new Carni(request.Name, request.IsBird));
+        _unitOfWork.AnimalRepository.AddAnimal(new Carni(request.Name, request.IsBird, request.Sound));
         _unitOfWork.Save();
     }
 }

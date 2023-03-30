@@ -7,7 +7,7 @@ public partial class HerbavoreService
 
     public void Add(HerbavoreRequest request)
     {
-        _unitOfWork.AnimalRepository.AddAnimal(new Herba(request.Name, request.IsBird));
+        _unitOfWork.AnimalRepository.AddAnimal(new Herba(request.Name, request.IsBird, request.Sound));
         _unitOfWork.Save();
     }
 }

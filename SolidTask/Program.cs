@@ -7,9 +7,9 @@ using SolidTask.Repositories.Implementations;
 
 IEnumerable<Animal> animals = new List<Animal>()
 {
-    new Herbavore("Worm",true),
-    new Carnivore("Fox",false),
-    new Herbavore("Bunny",false),
+    new Herbavore("Worm",true,"Worm sounds"),
+    new Carnivore("Fox",false, "What does the fox say?"),
+    new Herbavore("Bunny",false, "Cute bunny sounds"),
 };
 
 foreach (var animal in animals)

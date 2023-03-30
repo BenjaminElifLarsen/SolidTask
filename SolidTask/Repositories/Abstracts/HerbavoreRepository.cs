@@ -10,5 +10,5 @@ public class HerbavoreRepository : IHerbavoreRepository
         _store = store;
     }
 
-    public IEnumerable<Herbavore> All => _store.All.Where(x => x is Herbavore).Select(x => x);
+    public IEnumerable<Herbavore> All => _store.All;
 }
